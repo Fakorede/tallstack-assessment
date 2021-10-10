@@ -77,7 +77,7 @@ $ php artisan serve
 - [x] Use Laravel Excel to generate CSV.
 - [x] Use Livewire Datatables.
 - [x] Use Tailwind CSS.
-- [ ] Write Tests.
+- [x] Write Tests.
 - [x] Use Alpine/Livewire, not Vue.js or anything else.
 - [x] Create a seeder that seeds the DB with 100 practice staff, and 1000/50000 patients.
 
