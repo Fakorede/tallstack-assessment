@@ -25,7 +25,7 @@ class RecordSeeder extends Seeder
             $this->chunk_count = 1000;
         }
 
-         if (Patient::count() === 0 || Patient::count() >= 50000) {
+         if (Patient::count() === 0 || Patient::count() >= 10000) {
             return;
         }
 

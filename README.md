@@ -52,7 +52,8 @@ $ php artisan db:seed
 Run tests
 
 ```
-$ ./vendor/bin/phpunit
+$ php artisan test --filter StaffTest
+$ php artisan test --filter PatientTest
 ```
 
 Run application
@@ -88,6 +89,16 @@ $ php artisan serve
 
 ** Only Admin can add Staff Users.
 
+
 ## Built With
 
 The awesome [Tallstack](https://tallstack.dev/) 🥳 🎉 - The new way to build rich, reactive web apps.
+
+
+# IMPORTANT
+
+**For a CSV export of upto 50000, this would take a lot of memory and would require using a queue which will export the data in chunks.**
+
+**The application currently cannot handle large exports but will be able to if I implement the `shouldQueue` interface in the exports classes and setup a queue driver to run the queues/background jobs.**
+
+**This will be implemented as stated in the laravel-excel [docs](https://docs.laravel-excel.com/3.1/exports/queued.html) and would require setting up a queue driver as in the laravel [docs](https://laravel.com/docs/8.x/queues).**
